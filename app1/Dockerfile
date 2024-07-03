@@ -18,7 +18,16 @@ RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
 
 # Installing PHP
 RUN apk add --no-cache php8 
-    
+    --with-openssl \
+  --with-curl \
+  --with-zlib \
+  --with-mysqli \
+  --with-pdo-mysql \
+  --enable-cli \
+  --enable-fpm \
+  --enable-xml \
+  --enable-mbstring
+
 
 # Installing composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
