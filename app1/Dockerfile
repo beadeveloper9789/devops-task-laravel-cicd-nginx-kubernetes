@@ -44,8 +44,7 @@ RUN apk add --no-cache php8 \
 
 # Installing composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
-RUN php composer-setup.php --install-dir=/usr/bin/php --filename=composer
-RUN rm -rf composer-setup.php
+
 
 RUN composer install
 # generate an APP_KEY
