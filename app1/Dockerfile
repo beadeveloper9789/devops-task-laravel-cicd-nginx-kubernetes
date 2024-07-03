@@ -15,7 +15,8 @@ RUN apk add --no-cache zip unzip curl
 # Installing bash
 RUN apk add bash
 RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
-
+RUN echo 'https://dl-cdn.alpinelinux.org/alpine/v3.14/community' >> /etc/apk/repositories
+RUN echo 'https://dl-cdn.alpinelinux.org/alpine/v3.14/main' >> /etc/apk/repositories
 # Installing PHP
 RUN apk add --no-cache php8 \
     php8-common \
