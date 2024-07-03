@@ -17,8 +17,7 @@ RUN apk add bash
 RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
 
 # Installing PHP
-RUN apk add --no-cache php8 
-    --with-openssl \
+RUN apk add --no-cache php8  \
   --with-curl \
   --with-zlib \
   --with-mysqli \
